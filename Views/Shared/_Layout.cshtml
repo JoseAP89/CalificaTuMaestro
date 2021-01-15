@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] &bull; Califica tu Maestro</title>
+    <link rel="stylesheet" href="~/lib/bootstrap-5.0.0-beta1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav id="generalNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img id="mainLogo" src="~/img/icons/logo.png" alt=""/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link" href="#">Agrega</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - MyTeachers - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap-5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    @if (ViewData["StickyOn"]!=null && (bool)ViewData["StickyOn"])
+    {
+        <script src="~/js/home.js" ></script>
+    }
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

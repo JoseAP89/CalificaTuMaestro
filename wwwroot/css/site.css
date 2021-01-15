@@ -1,0 +1,125 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+html {
+    scroll-behavior: smooth;
+}
+
+header #generalNavbar {
+    background: rgb(72,190,217);
+    background: -moz-linear-gradient(90deg, rgba(72,190,217,1) 12%, rgba(22,127,152,1) 54%);
+    background: -webkit-linear-gradient(90deg, rgba(72,190,217,1) 12%, rgba(22,127,152,1) 54%);
+    background: linear-gradient(90deg, rgba(72,190,217,1) 12%, rgba(22,127,152,1) 54%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#48bed9",endColorstr="#167f98",GradientType=1);
+}
+
+header #generalNavbar .navbar-brand img{
+    width: 70px;
+}
+
+header #generalNavbar .navbar-nav a {
+    color: white ;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .sticky {
+        width: 80%;
+    }
+}
+
+.searchTeacher {
+    padding-top: 25px;
+    background: linear-gradient( rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.1) ), url("../img/img/classroom.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100%;
+}
+
+.searchTeacher p , .searchTeacher h2, .searchTeacher button {
+    color: #f0f8ff; /*aliceblue*/
+}
+
+.searchTeacher button {
+    background: #ba55d3;
+}
+
+.searchTeacher button:hover {
+    font-weight: bolder;
+    background-color: #1e90ff;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
